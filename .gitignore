@@ -70,3 +70,5 @@ yarn-error.log
  
 # swc plugins
 .swc
+
+dist

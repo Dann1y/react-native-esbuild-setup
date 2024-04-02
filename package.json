@@ -1,12 +1,20 @@
 {
-  "name": "RNEsbuild",
+  "name": "react-native-esbuild-setup",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "lint": "eslint .",
-    "start": "react-native start",
+    "start": "rne start",
+    "serve": "rne serve",
+    "bundle:android": "rne bundle --platform=android --bundle-output=dist/android.jsbundle --assets-dest=dist/assets",
+    "bundle:ios": "rne bundle --platform=ios --bundle-output=dist/ios.jsbundle --assets-dest=dist/assets",
+    "bundle:web": "rne bundle --platform=web --bundle-output=public/index.js --entry-file=index.web.js",
+    "start:metro": "react-native start",
+    "bundle:metro:android": "react-native bundle --entry-file=index.js --platform=android --bundle-output=dist/android-metro.bundlejs",
+    "bundle:metro:ios": "react-native bundle --entry-file=index.js --platform=ios --bundle-output=dist/ios-metro.bundlejs",
+    "pod:install": "cd ios && pod install",
     "test": "jest"
   },
   "dependencies": {
